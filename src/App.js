@@ -1,7 +1,17 @@
-import logo from './logo.svg';
+import React, { Component } from 'react';
+
 import './App.css';
 
-function App() {
+class App extends Component {
+  constructor() {
+    super();
+    this.state = {
+
+    }
+  }
+
+
+  render() {
   return (
     <div className="App">
       <h1>Kraken's Kove: Header Component w/Nav Bar</h1>
@@ -10,7 +20,8 @@ function App() {
         <p>React Router?<p>
       </div>
     </div>
-  );
+  )
+}
 }
 
 export default App;
