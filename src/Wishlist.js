@@ -8,9 +8,16 @@ class Wishlist extends Component {
 
     }
   }
+
+
   render() {
     return(
-      
+      <div>
+        <h2>Wishlist container Title</h2>
+        <p>Items container</p>
+        <p>Total</p>
+        <button>Remove All</button>
+      </div>
     )
   }
 }
