@@ -6,7 +6,8 @@ function App() {
     <div className="App">
       <h1>Kraken's Kove: Header Component w/Nav Bar</h1>
       <div className="Features Container">
-        <h2>Featured Categories</h2>
+        <h2>Featured Categories Component</h2>
+        <p>React Router?<p>
       </div>
     </div>
   );
