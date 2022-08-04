@@ -23,6 +23,10 @@ describe('Search', () => {
 
   })
 
+  it('Should have error handling for a title search', () => {
+
+  })
+
   it('Should have a form that holds several possible options to narrow search', () => {
 
   })
@@ -31,5 +35,19 @@ describe('Search', () => {
 
   })
 
-  
+  it('Should allow the user to click on a game to like or unlike', () =>. {
+
+  })
+
+  it('Should have a button at the button which render a new page of games or extends the page', () => {
+    
+  })
+
+  it('Should greyout liked games in the current list', () => {
+
+  })
+
+  it('Should update the wishlist button/icon', () => {
+
+  })
 })
