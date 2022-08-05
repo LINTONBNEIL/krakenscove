@@ -1,0 +1,15 @@
+import React from 'react'
+import '../styles/NavBar.css'
+
+import NavBar = () => {
+
+  return (
+    <nav>
+      <button>HOME</button>
+      <button>SEARCH</button>
+      <button>WISHLIST</button>
+    </nav>
+  )
+}
+
+export default NavBar;

@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import './Wishlist.css'
+import '../styles/Wishlist.css'
 
 class Wishlist extends Component {
   constructor() {
