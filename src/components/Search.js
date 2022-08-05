@@ -19,8 +19,8 @@ class Search extends Component{
           <h2>title of form box</h2>
           <h2>title of form box</h2>
           <h2>title of form box</h2>
+          <h2>Search Title/button</h2>
         </form>
-        <h2>Search Title/button</h2>
         <p>List of games(another container)</p>
       </div>
     )
