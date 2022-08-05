@@ -1,7 +1,7 @@
 import React from 'react'
 import '../styles/NavBar.css'
 
-import NavBar = () => {
+const NavBar = () => {
 
   return (
     <nav>
