@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { listOfDeals, listOfStores, listOfGames } from '../apiCalls';
+import Search from './Search'
 import Header from './Header';
 import Home from './Home'
 import NavBar from './NavBar';
@@ -7,7 +8,7 @@ import '../styles/App.css';
 
 class App extends Component {
   constructor() {
-    super();
+    super()
     this.state = {
       favorites: [],
       stores: [],
@@ -17,14 +18,11 @@ class App extends Component {
 
   componentDidMount = () => {
     listOfStores()
-    .then(results => this.filterResults(results))
+    .then(results => {
+      const filteredStores = results.filter(result => result.isActive)
+      this.setState({stores: filteredStores})
+    })
     .catch(error => console.log(error))
-  };
-
-  filterResults = (results) => {
-    const filteredStores = results.filter(result => result.isActive)
-    this.setState({ stores: filteredStores })
-    console.log(this.state.stores)
   }
 
 
@@ -33,7 +31,7 @@ class App extends Component {
       <div className="App">
         <Header />
         <NavBar />
-        <Home stores={this.state.stores}/>
+        <Search />
       </div>
     )
   }

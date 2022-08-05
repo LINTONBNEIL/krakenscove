@@ -1,6 +1,8 @@
 import React from 'react'
 import '../styles/Home.css'
 import StoreIcon from './StoreIcon'
+
+
 const Home = ({stores}) => {
 
   const storeList = stores.map(store => {
@@ -18,7 +20,6 @@ const Home = ({stores}) => {
   return (
     <div>
       <h2>Some Cool Stuff!</h2>
-      <p>Search from hundreds of titles, from reputable sources.</p>
       <div className="stores-container">
         {storeList}
       </div>
