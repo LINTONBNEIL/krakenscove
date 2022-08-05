@@ -16,14 +16,14 @@ class App extends Component {
     }
   }
 
-  componentDidMount = () => {
-    listOfStores()
-    .then(results => {
-      const filteredStores = results.filter(result => result.isActive)
-      this.setState({stores: filteredStores})
-    })
-    .catch(error => console.log(error))
-  }
+  // componentDidMount = () => {
+  //   listOfStores()
+  //   .then(results => {
+  //     const filteredStores = results.filter(result => result.isActive)
+  //     this.setState({stores: filteredStores})
+  //   })
+  //   .catch(error => console.log(error))
+  // }
 
 
   render() {
