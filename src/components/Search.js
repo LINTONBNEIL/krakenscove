@@ -1,27 +1,31 @@
 import React, { Component } from 'react';
-import './styles/Search.css';
+import { listOfDeals, listOfGames, listOfStores } from '../apiCalls'
+import '../styles/Search.css';
 
-class Search extends Component{
+class Search extends Component {
   constructor() {
     super();
     this.state = {
-
+      store: '',
+      
     }
   }
 
-
-
+handleChange = (event) => {
+  this.setState({
+    [event.target.name]: event.target.value
+  })
+}
 
   render() {
     return(
       <div>
         <form>
-          <h2>title of form box</h2>
-          <h2>title of form box</h2>
-          <h2>title of form box</h2>
-          <h2>Search Title/button</h2>
+          <div className="narrowPrice">
+          </div>
+          <div className="radio-buttons">
+          </div>
         </form>
-        <p>List of games(another container)</p>
       </div>
     )
   }
