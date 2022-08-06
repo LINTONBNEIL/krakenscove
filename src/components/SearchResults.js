@@ -23,7 +23,7 @@ const findLogo = (deal) => {
   let logo = stores.reduce((acc, store) => {
 
     if (deal.storeID === store.storeID) {
-      acc = store.images.logo
+      acc = store.images.icon
       }
 
     return acc
@@ -31,6 +31,13 @@ const findLogo = (deal) => {
 
   return logo
 }
+
+const findPercentage = (deal) => {
+  let roundNumber = Math.round(deal.savings)
+
+  return roundNumber
+}
+
 
 
   const displayDeals = filterDeals().map(deal => {
@@ -44,7 +51,7 @@ const findLogo = (deal) => {
         storeLogo={findLogo(deal)}
         thumb={deal.thumb}
         title={deal.title}
-        releaseDate={deal.releaseDate}
+        savings={findPercentage(deal)}
         steamRatingText={deal.steamRatingText}
         normalPrice={deal.normalPrice}
         salePrice={deal.salePrice}

@@ -3,15 +3,17 @@ import '../styles/SelectStore.css'
 
 
 const SelectStore = ({stores}) => {
+
   const mapStores = stores.map(store => {
     return (
-      <option key={store.storeID} value={store.storeID}>{store.storeName}</option>
+    <option key={store.storeID} value={store.storeID}>{store.storeName}</option>
     )
   })
 
+
   return(
     <select>
-      <option>Search Store</option>
+      <option>Select Store</option>
       {mapStores}
     </select>
   )

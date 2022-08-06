@@ -41,14 +41,14 @@ componentDidMount = () => {
 
   render() {
     return(
-      <div>
-        <form>
+      <div className="Search-Screen">
+        <form className="Form">
           <input placeholder='Enter Title(case sensitive)'></input>
           <button>Submit</button>
           <SelectStore stores={this.state.stores}/>
           <SortList />
         </form>
-        <div className="SearchResults">
+        <div className="Search-Results">
           <SearchResults deals={this.state.deals} stores={this.state.stores}/>
         </div>
       </div>

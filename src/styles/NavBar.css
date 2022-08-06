@@ -1,0 +1,24 @@
+.Nav-Banner {
+  background-color: blue;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 30%;
+  width: auto;
+}
+
+.Header {
+  display: flex;
+  align-items: center;
+}
+
+.Nav-Container {
+  padding-left: 10%;
+  padding-right: 10%;
+  display: flex;
+  justify-content: space-around;
+}
+
+button {
+  margin-right: 10%;
+}
