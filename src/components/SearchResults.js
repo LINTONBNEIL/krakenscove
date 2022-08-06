@@ -23,12 +23,11 @@ const findLogo = (deal) => {
   let logo = stores.reduce((acc, store) => {
 
     if (deal.storeID === store.storeID) {
-      acc = store.images.icon
+      acc = store.images.logo
       }
 
     return acc
   },'')
-
   return logo
 }
 

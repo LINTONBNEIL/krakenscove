@@ -9,7 +9,7 @@
 }
 
 
-.Game-Img-Container, .Game-Title {
+.Game-Img-Container, .Game-Title-Container {
   display: flex;
   align-items: center;
   height: inherit;
@@ -21,12 +21,12 @@
   width: 30%;
 }
 
-.Price-Percentage > h3 {
+.Price-Percentage, .Savings {
   background-color: green;
   color: white;
 }
 
-.Title, .Price-Cut {
+.Game-Title, .Price-Cut {
   color: white;
   font-size: 90%
 }
@@ -34,10 +34,22 @@
 .Price-Cut {
   display: flex;
   flex-direction: column;
-  margin-right: 5%;
 }
 
 .normalPrice {
   color: grey;
   text-decoration: line-through;
+}
+
+.Logo-Container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: inherit;
+  width: 10%;
+}
+
+.Store-Logo {
+  height: 25%;
+  width: 25%;
 }

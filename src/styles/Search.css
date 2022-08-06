@@ -6,13 +6,17 @@
   width: 100vw;
 }
 
-.Form {
+.Form, .Form-Container {
   display: flex;
   justify-content: center;
   align-items: center;
   height: auto;
   width: auto;
-  margin-bottom: 10%;
+  margin: 2%;
+}
+
+.Form {
+  padding-right: 91%
 }
 
 .Search-Results {

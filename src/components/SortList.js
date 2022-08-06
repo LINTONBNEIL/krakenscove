@@ -2,17 +2,17 @@ import React from 'react'
 import '../styles/SortList.css'
 
 
-const SortList = () => {
+const SortList = ({handleChange}) => {
 
     return (
-      <select>
+      <select name="sortRelevence" onChange={event => handleChange(event)}>
         <option>Relevence</option>
-        <option>Deal Rating</option>
-        <option>Name</option>
-        <option>Reviews</option>
-        <option>Release Date</option>
-        <option>Lower Price</option>
-        <option>Upper Price</option>
+        <option value="Deal Rating">Deal Rating</option>
+        <option value="title">Name</option>
+        <option value="Reviews">Reviews</option>
+        <option value="Relase">Release Date</option>
+        <option value="lowerPrice">Lower Price</option>
+        <option value="upperPrice">Upper Price</option>
       </select>
     )
 }

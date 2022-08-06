@@ -13,7 +13,8 @@ class Search extends Component {
       deals: [],
       sortStore: '',
       sortRelevence: '',
-      title: ''
+      title: '',
+      error: ''
     }
   }
 
@@ -21,6 +22,17 @@ handleChange = (event) => {
   this.setState({
     [event.target.name]: event.target.value
   })
+}
+
+handleSubmit = (event) => {
+  event.preventDefault()
+  if (!this.state.title) {
+    this.setState({
+      error: 'Unable to make request, please search using the viable parameters'
+    })
+    console.log("Ouch")
+  }
+  this.displayNewSearch()
 }
 
 componentDidMount = () => {
@@ -38,16 +50,29 @@ componentDidMount = () => {
   .catch(error => console.log(error))
 }
 
+displayNewSearch = () => {
+  if (this.state.title) {
+    const parameters = `title=${this.state.title}`
+    listOfDeals(parameters)
+    .then(result => {
+      this.setState({deals: result})
+    })
+    .catch(error => console.log(error))
+  }
+}
+
 
   render() {
     return(
       <div className="Search-Screen">
-        <form className="Form">
-          <input placeholder='Enter Title(case sensitive)'></input>
-          <button>Submit</button>
-          <SelectStore stores={this.state.stores}/>
-          <SortList />
-        </form>
+        <div className="Form-Container">
+          <form className="Form">
+            <input name="title" placeholder='Search Titles' onChange={event => this.handleChange(event)}></input>
+            <button onClick={event => this.handleSubmit(event)}>Submit</button>
+          </form>
+          <SelectStore stores={this.state.stores} handleChange={event => this.handleChange(event)}/>
+          <SortList handleChange={event => this.handleChange(event)}/>
+        </div>
         <div className="Search-Results">
           <SearchResults deals={this.state.deals} stores={this.state.stores}/>
         </div>
