@@ -6,7 +6,7 @@ const SelectStore = ({stores, handleChange}) => {
 
   const mapStores = stores.map(store => {
     return (
-    <option key={store.storeID} value={store.storeID}>{store.storeName}</option>
+    <option key={store.storeID} value={`storeID=${store.storeID}`}>{store.storeName}</option>
     )
   })
 

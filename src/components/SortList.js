@@ -7,12 +7,11 @@ const SortList = ({handleChange}) => {
     return (
       <select name="sortRelevence" onChange={event => handleChange(event)}>
         <option>Relevence</option>
-        <option value="Deal Rating">Deal Rating</option>
-        <option value="title">Name</option>
-        <option value="Reviews">Reviews</option>
-        <option value="Relase">Release Date</option>
-        <option value="lowerPrice">Lower Price</option>
-        <option value="upperPrice">Upper Price</option>
+        <option value="sortBy=Deal Rating">Deal Rating</option>
+        <option value="sortBy=Reviews">Reviews</option>
+        <option value="sortBy=Relase">Release Date</option>
+        <option value="sortBy=Price&upperPrice=50&desc=1">Highest Price</option>
+        <option value="sortBy=Price&lowerPrice=0">Lowest Price</option>
       </select>
     )
 }
