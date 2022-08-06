@@ -1,0 +1,55 @@
+.Game-Card {
+  display: flex;
+  flex-direction: default;
+  align-items: center;
+  justify-content: space-between;
+  background-color: pink;
+  height: 100%;
+  width: 100%;
+}
+
+
+.Game-Img-Container, .Game-Title-Container {
+  display: flex;
+  align-items: center;
+  height: inherit;
+  width: 30%;
+}
+
+.Game-Img {
+  height: inherit;
+  width: 30%;
+}
+
+.Price-Percentage, .Savings {
+  background-color: green;
+  color: lime;
+}
+
+.Game-Title, .Price-Cut {
+  color: white;
+  font-size: 90%
+}
+
+.Price-Cut {
+  display: flex;
+  flex-direction: column;
+}
+
+.normalPrice {
+  color: grey;
+  text-decoration: line-through;
+}
+
+.Logo-Container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: inherit;
+  width: 10%;
+}
+
+.Store-Logo {
+  height: 25%;
+  width: 25%;
+}
