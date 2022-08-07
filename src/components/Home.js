@@ -18,9 +18,9 @@ const Home = ({stores}) => {
   })
 
   return (
-    <div>
+    <div className="Home">
       <h2>Some Cool Stuff!</h2>
-      <div className="stores-container">
+      <div className="Stores-Container">
         {storeList}
       </div>
     </div>

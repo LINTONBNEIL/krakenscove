@@ -2,9 +2,8 @@
   background-color: blue;
   display: flex;
   align-items: center;
-  justify-content: center;
-  height: 30%;
-  width: auto;
+  height: 20%;
+  width: 100%;
 }
 
 .Header {
@@ -17,6 +16,8 @@
   padding-right: 10%;
   display: flex;
   justify-content: space-around;
+  height: auto;
+  width: ;
 }
 
 button {
