@@ -4,12 +4,11 @@ import '../styles/GameDetails.css'
 
 
 class GameDetails extends Component {
-  constructor(props) {
-    super(props);
+  constructor() {
+    super();
     this.state = {
       game: {},
       gameList: [],
-      filteredGames: []
     }
   }
 
@@ -30,7 +29,15 @@ class GameDetails extends Component {
     .catch(error => console.log(error))
   }
 
-
+handleFavorite = () => {
+  let favorite = {
+    id: this.props.dealID,
+    title: this.state.game['name'],
+    picture: this.state.game['thumb'],
+    price: this.state.game['salePrice']
+  }
+  this.props.addFavorite(favorite)
+}
 
 
   render() {
@@ -45,7 +52,7 @@ class GameDetails extends Component {
           <p>{`Sale: $${this.state.game['salePrice']}`}</p>
           <div>
             <button>link</button>
-            <button>Favorite</button>
+            <button onClick={this.handleFavorite}>Favorite</button>
           </div>
         </div>
       </div>

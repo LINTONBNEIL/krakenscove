@@ -2,7 +2,7 @@ import React from 'react'
 import GameCard from './GameCard'
 import '../styles/SearchResults.css'
 
-const SearchResults = ({deals, stores}) => {
+const SearchResults = ({deals, stores, addFavorite}) => {
 
 
   const filterDeals = () => {
