@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import '../styles/GameCard.css'
 
 
@@ -6,6 +7,7 @@ const GameCard = ({id, gameID, dealID, storeID, thumb, title, savings, steamRati
 
 
   return (
+  <Link to={`/GameDetails/${dealID}`}>
     <div className="Game-Card">
       <div className="Game-Img-Container">
         <img className="Game-Img" src={thumb} alt={title}/>
@@ -24,6 +26,7 @@ const GameCard = ({id, gameID, dealID, storeID, thumb, title, savings, steamRati
         <img className="Store-Logo" src={`https://www.cheapshark.com/${storeLogo}`} />
       </div>
     </div>
+  </Link>
   )
 }
 
