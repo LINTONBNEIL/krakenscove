@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import { Link } from 'react-router-dom'
 import '../styles/GameCard.css'
 
@@ -31,3 +32,17 @@ const GameCard = ({id, gameID, dealID, storeID, thumb, title, savings, steamRati
 }
 
 export default GameCard;
+
+GameCard.propTypes = {
+  id: PropTypes.string,
+  gameID: PropTypes.string,
+  dealID: PropTypes.string,
+  storeID: PropTypes.string,
+  thumb: PropTypes.string,
+  title: PropTypes.string,
+  savings: PropTypes.string,
+  steamRatingText: PropTypes.string,
+  normalPrice: PropTypes.string,
+  salePrice: PropTypes.string,
+  storeLogo: PropTypes.string
+}

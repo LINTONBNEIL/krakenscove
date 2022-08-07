@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import SelectStore from './SelectStore'
 import SearchResults from './SearchResults'
+import PropTypes from 'prop-types'
 import SortList from './SortList'
 import { listOfDeals, listOfGames, listOfStores } from '../apiCalls'
 import '../styles/Search.css';

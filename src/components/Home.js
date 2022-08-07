@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import '../styles/Home.css'
 import StoreIcon from './StoreIcon'
 
@@ -29,3 +30,8 @@ const Home = ({stores}) => {
 
 
 export default Home;
+
+Home.propTypes = {
+  stores: PropTypes.array,
+  stores: PropTypes.arrayOf(PropTypes.object)
+}

@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import '../styles/SortList.css'
 
 
@@ -16,4 +17,8 @@ const SortList = ({handleChange}) => {
     )
 }
 
-export default SortList
+export default SortList;
+
+SortList.propTypes = {
+  handleChange: PropTypes.string
+}

@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import '../styles/SelectStore.css'
 
 
@@ -21,3 +22,8 @@ const SelectStore = ({stores, handleChange}) => {
 
 
 export default SelectStore
+
+SelectStore.propTypes = {
+  stores: PropTypes.array,
+  handleChange: PropTypes.func
+}
