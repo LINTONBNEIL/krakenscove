@@ -27,15 +27,32 @@ class App extends Component {
     .catch(error => console.log(error))
   }
 
+  addFavorite = (favorite) => {
+    this.setState({
+      favorites: [...this.state.favorites, favorite]
+    })
+  }
+
+  removeFavorite = (id) => {
+    const filterFavorites = this.state.favorites.filter(favItem => favItem.id !== id)
+
+    this.setState({favorites: filterFavorites})
+  }
+
+  removeAllFavorite = () => {
+    this.setState({
+      favorites: []
+    })
+  }
 
   render() {
     return (
       <div className="App">
         <NavBar />
         <Route exact path="/" render={() => <Home stores={this.state.stores}/>} />
-        <Route exact path="/Search" render={() => <Search />} />
-        <Route exact path="/Wishlist" render={() => <Wishlist />} />
-        <Route exact path="/GameDetails/:dealID" render={({match}) => <GameDetails dealID={match.params.dealID}/>}/>
+        <Route exact path="/Search" render={() => <Search  />} />
+        <Route exact path="/Wishlist" render={() => <Wishlist favorites={this.state.favorites} removeFavorite={this.removeFavorite} removeAllFavorite={this.removeAllFavorite}/>} />
+        <Route exact path="/GameDetails/:dealID" render={({match}) => <GameDetails addFavorite={this.addFavorite} dealID={match.params.dealID}/>}/>
       </div>
     )
   }

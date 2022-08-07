@@ -1,25 +1,32 @@
-import React, { Component } from 'react'
+import React from 'react'
+import FavoriteCard from './FavoriteCard'
 import '../styles/Wishlist.css'
 
-class Wishlist extends Component {
-  constructor() {
-    super();
-    this.state = {
+const Wishlist = ({favorites, removeFavorite, removeAllFavorite}) => {
 
-    }
-  }
+const displayList = favorites.map(favGame => {
+  return (
+    <FavoriteCard id={favGame.id} key={favGame.id} title={favGame.title} picture={favGame.picture} price={favGame.price} removeFavorite={removeFavorite}/>
+  )
+})
 
+const calculateTotal = favorites.reduce((acc, item) => {
+  let total = parseInt(item.price)
 
-  render() {
-    return(
-      <div>
-        <h2>Wishlist container Title</h2>
-        <p>Items container</p>
-        <p>Total</p>
-        <button>Remove All</button>
-      </div>
-    )
-  }
+  return acc += total
+}, 0)
+
+  return(
+    <div>
+      <h2>Wishlist container Title</h2>
+      {favorites.length > 0 ?
+      <div className="fav-card-list">
+        {displayList}
+      </div> : <h3 className="fav-error">Currently You have nothing favorited!</h3>}
+      {favorites.length > 0 ? <p>{calculateTotal}</p> : <p>Find a game to favorite!</p> }
+      {favorites.length > 0 && <button onClick={removeAllFavorite}>Remove All</button>}
+    </div>
+  )
 }
 
 export default Wishlist
