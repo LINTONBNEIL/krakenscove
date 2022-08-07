@@ -14,7 +14,7 @@ const GameCard = ({id, gameID, dealID, storeID, thumb, title, savings, steamRati
         <h2 className="Game-Title">{title}</h2>
       </div>
       <div className="Price-Percentage">
-        <h3 className="Savings">{`%${savings}`}</h3>
+        <h3 className="Savings">{`${savings}%`}</h3>
       </div>
       <div className="Price-Cut">
         <h3 className="normalPrice">{`$${normalPrice}`}</h3>
