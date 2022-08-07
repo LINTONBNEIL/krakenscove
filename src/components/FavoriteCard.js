@@ -21,6 +21,6 @@ FavoriteCard.propTypes = {
   id: PropTypes.string,
   title: PropTypes.string,
   picture: PropTypes.string,
-  price: PropTypes.price,
-  removeFavorite: PropTypes
+  price: PropTypes.string,
+  removeFavorite: PropTypes.func
 }

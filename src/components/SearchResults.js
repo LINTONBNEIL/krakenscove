@@ -1,5 +1,6 @@
 import React from 'react'
 import GameCard from './GameCard'
+import PropTypes from 'prop-types'
 import '../styles/SearchResults.css'
 
 const SearchResults = ({deals, stores, addFavorite}) => {
@@ -68,3 +69,9 @@ const findPercentage = (deal) => {
 
 
 export default SearchResults;
+
+SearchResults.propTypes = {
+  deals: PropTypes.array,
+  stores: PropTypes.array,
+  addFavorite: PropTypes.func
+}
