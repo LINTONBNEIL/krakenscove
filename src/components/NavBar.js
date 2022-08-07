@@ -13,7 +13,7 @@ const NavBar = () => {
       <nav className="Nav-Container">
       <NavLink to="/"><button>HOME</button></NavLink>
       <NavLink to="/Search"><button>SEARCH</button></NavLink>
-      <NavLink to="Wishlist"><button>WISHLIST</button></NavLink>
+      <NavLink to="/Wishlist"><button>WISHLIST</button></NavLink>
       </nav>
     </div>
   )
