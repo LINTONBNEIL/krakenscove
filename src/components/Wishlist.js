@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import FavoriteCard from './FavoriteCard'
 import '../styles/Wishlist.css'
 
@@ -23,10 +24,17 @@ const calculateTotal = favorites.reduce((acc, item) => {
       <div className="fav-card-list">
         {displayList}
       </div> : <h3 className="fav-error">Currently You have nothing favorited!</h3>}
-      {favorites.length > 0 ? <p>{calculateTotal}</p> : <p>Find a game to favorite!</p> }
+      {favorites.length > 0 ? <p>{`Total: $${calculateTotal}`}</p> : <p>Find a game to favorite!</p> }
       {favorites.length > 0 && <button onClick={removeAllFavorite}>Remove All</button>}
     </div>
   )
 }
 
-export default Wishlist
+export default Wishlist;
+
+Wishlist.propTypes = {
+  favorites: PropTypes.array,
+  favorites: PropTypes.arrayOf(PropTypes.object),
+  removeFavorite: PropTypes.func,
+  removeAllFavorite: PropTypes.func
+}

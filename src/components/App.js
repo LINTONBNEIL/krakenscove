@@ -5,6 +5,7 @@ import Home from './Home'
 import Wishlist from './Wishlist'
 import NavBar from './NavBar';
 import GameDetails from './GameDetails'
+import PropTypes from 'prop-types'
 import { Route } from 'react-router-dom'
 import '../styles/App.css';
 
