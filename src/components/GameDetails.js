@@ -43,16 +43,16 @@ handleFavorite = () => {
   render() {
     return(
       <div>
-        <h2>{this.state.game['name']}</h2>
+        <h2 className="Detail-Title">{this.state.game['name']}</h2>
         <div>
-          <img src={this.state.game['thumb']} alt={this.state.game['name']} />
+          <img className="Detail-Poster"src={this.state.game['thumb']} alt={this.state.game['name']} />
         </div>
         <div>
-          <p>{`Retail: $${this.state.game['retailPrice']}`}</p>
-          <p>{`Sale: $${this.state.game['salePrice']}`}</p>
+          <h3>{`Retail: $${this.state.game['retailPrice']}`}</h3>
+          <h3>{`Sale: $${this.state.game['salePrice']}`}</h3>
           <div>
             <button>link</button>
-            <button onClick={this.handleFavorite}>Favorite</button>
+            <button className="Detail-Favorites" onClick={this.handleFavorite}>Favorite</button>
           </div>
         </div>
       </div>

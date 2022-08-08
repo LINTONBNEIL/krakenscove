@@ -19,6 +19,7 @@ export async function listOfStores() {
       const data = await response.json()
       return data
   }
+  
 
 // -- GAMES --
 // DETAILS

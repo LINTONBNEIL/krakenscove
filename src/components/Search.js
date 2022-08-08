@@ -66,7 +66,7 @@ displayNewSearch = () => {
       <div className="Search-Screen">
         <form className="Form">
           <input name="title" placeholder='Search Titles' onChange={event => this.handleChange(event)}></input>
-          <button onClick={event => this.handleSubmit(event)}>Submit</button>
+          <button className="Form-Button" onClick={event => this.handleSubmit(event)}>Submit</button>
           <SelectStore stores={this.state.stores} handleChange={event => this.handleChange(event)}/>
           <SortList handleChange={event => this.handleChange(event)}/>
         </form>
