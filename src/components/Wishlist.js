@@ -18,7 +18,7 @@ const calculateTotal = favorites.reduce((acc, item) => {
 }, 0)
 
   return(
-    <div>
+    <div className="Wish-Container">
       <h2>Wishlist container Title</h2>
       {favorites.length > 0 ?
       <div className="fav-card-list">

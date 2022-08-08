@@ -20,7 +20,7 @@ const Home = ({stores}) => {
 
   return (
     <div className="Home">
-      <h2>Some Cool Stuff!</h2>
+      <h3 className="Welcome">Find Affordable games from these amazing Titles..</h3>
       <div className="Stores-Container">
         {storeList}
       </div>
