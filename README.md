@@ -32,20 +32,23 @@
 4. Run npm start
 
 ### Deployment Link
-Checkout []() 
+Checkout [Krakens Cove](https://krakenscove.vercel.app/) 
 ### Features
 - Favoriting
 - Searching Games by title
 - Search Cheapest
 - Search Highest Price
 - Search By Store
+- Almost Completely tabbable in some areas.
 
 
 ### Future Features
 - Refactoring CSS for responsiveness
 - Add links to where to buy games in details page
 - Ability to compare/find cheapest game on the market if you didn't click the cheapest.
-- Better Home page.
+- Better rendering.
+- Skeleton Components for rendering(better UI)
+- Better Home page, Layout, and Styling for UI/UX
 
 ### Contributors
 
