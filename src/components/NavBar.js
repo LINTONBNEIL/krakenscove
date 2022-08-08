@@ -7,8 +7,8 @@ const NavBar = () => {
   return (
     <div className="Nav-Banner">
       <header className="Header">
-        <h2>ICON</h2>
-        <h1 className="Title">TITLE</h1>
+        <h2 className="Web-Icon">ICON</h2>
+        <h1 className="Title">Krakens Cove</h1>
       </header>
       <nav className="Nav-Container">
       <NavLink to="/"><button>HOME</button></NavLink>

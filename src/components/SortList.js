@@ -20,5 +20,5 @@ const SortList = ({handleChange}) => {
 export default SortList;
 
 SortList.propTypes = {
-  handleChange: PropTypes.string
+  handleChange: PropTypes.func
 }

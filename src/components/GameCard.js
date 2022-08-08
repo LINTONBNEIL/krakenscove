@@ -40,7 +40,7 @@ GameCard.propTypes = {
   storeID: PropTypes.string,
   thumb: PropTypes.string,
   title: PropTypes.string,
-  savings: PropTypes.string,
+  savings: PropTypes.number,
   steamRatingText: PropTypes.string,
   normalPrice: PropTypes.string,
   salePrice: PropTypes.string,
