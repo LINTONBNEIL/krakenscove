@@ -1,18 +1,20 @@
 
 .Home {
-  height: 100%;
-  width: 100%;
+  height: auto;
+  width: auto;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
 
+.Welcome {
+  padding: 5%;
+}
+
 .Stores-Container {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-column-gap: 1%;
-  grid-row-gap: 1%;
-  height: 50%;
-  width: 50%;
+  grid-template-columns: repeat(4, .5fr);
+  height: 60%;
+  width: 60%;
 }

@@ -2,8 +2,9 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  height: 100vh;
-  width: 100vw;
+  height: 100%;
+  width: 100%;
+  overflow-y: scroll;
 }
 
 .Form {
@@ -18,8 +19,8 @@
 .Search-Results {
   display: grid;
   grid-auto-rows: 1fr;
-  grid-column-gap: 1%;
-  grid-row-gap: 1%;
+  grid-column-gap: .1%;
+  grid-row-gap: .1%;
   justify-items: stretch;
   align-items: stretch;
   height: 100%;

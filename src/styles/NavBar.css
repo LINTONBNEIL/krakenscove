@@ -1,8 +1,9 @@
 .Nav-Banner {
-  background-color: blue;
+  background: black;
   display: flex;
   align-items: center;
-  height: 20%;
+  justify-content: center;
+  height: 30%;
   width: 100%;
 }
 
@@ -14,12 +15,6 @@
 .Nav-Container {
   padding-left: 10%;
   padding-right: 10%;
-  display: flex;
-  justify-content: space-around;
-  height: auto;
-  width: ;
-}
-
-button {
-  margin-right: 10%;
+  height: 100%;
+  width: 100%;
 }
