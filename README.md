@@ -39,7 +39,6 @@ Checkout [Krakens Cove](https://krakenscove.vercel.app/)
 - Search Cheapest
 - Search Highest Price
 - Search By Store
-- Almost Completely tabbable in some areas.
 
 
 ### Future Features
